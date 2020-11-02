@@ -1,0 +1,37 @@
+.item-new
+  .item-new__imageIndicator
+    %ul.item-new__imageLists
+    #js-image-file-fields
+      = form_with model: @item, html: { id: "new-item-form" } do |f|
+        .item-content
+          .item-content__content
+            = f.fields_for :images do |i|
+              = i.label :url, for: "item-content__fileField#{i.index}", id: "image-label" do
+                = i.file_field :url, class: "item-content__fileField", id: "item-content__fileField#{i.index}", "data-index": "#{i.index}"
+                %pre.upload-letter
+                  クリックして、画像をアップロードしましょう！
+        
+        .item-content__content
+          .item-content__label
+            %label
+              商品名
+            .item-content__contentField
+              = f.text_field :name, class: "input-default input-default--name"
+        
+        .item-content__content
+          .item-content__label
+            %label
+              商品説明
+            .item-content__contentField
+              = f.text_area :description, class: "input-default input-default--description"
+
+        .item-content__content
+          .item-content__label
+            %label
+              価格
+            .item-content__contentField
+              = f.text_field :rice, class: "input-default input-default--price"
+
+        .item-content__content
+          .item-content__submit
+            = f.submit "送信", class: ".item-content__submitBtn"
