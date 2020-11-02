@@ -47,7 +47,7 @@ $(function(){
     $(`#item-content__fileField${img_data_index}`).remove();
 
     let img_field_num = $(".item-content__fileField").length;
-    console.log()
+
     if(img_field_num <= 5) {
       $(".upload-letter").removeAttr("style");
     }
