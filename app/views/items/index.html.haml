@@ -4,3 +4,14 @@
 - else
   = link_to "新規登録", new_user_registration_path
   = link_to "ログイン", new_user_session_path
+
+.items
+  - @items.each do |item|
+    = image_tag "#{item.images[0].name}", size: "200×200"
+    .items__details
+      .items__name
+        アイテム名
+        = item.name
+      .items__price
+        価格
+        = item.price

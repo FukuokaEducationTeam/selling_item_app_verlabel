@@ -4,6 +4,14 @@
   }
 }
 
+.items {
+  &__details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
 .upload-letter {
   padding: 20px;
 }

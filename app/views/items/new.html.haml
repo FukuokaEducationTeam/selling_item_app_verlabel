@@ -6,8 +6,8 @@
         .item-content
           .item-content__content
             = f.fields_for :images do |i|
-              = i.label :url, for: "item-content__fileField#{i.index}", id: "image-label" do
-                = i.file_field :url, class: "item-content__fileField", id: "item-content__fileField#{i.index}", "data-index": "#{i.index}"
+              = i.label :name, for: "item-content__fileField#{i.index}", id: "image-label" do
+                = i.file_field :name, class: "item-content__fileField", id: "item-content__fileField#{i.index}", "data-index": "#{i.index}"
                 %pre.upload-letter
                   クリックして、画像をアップロードしましょう！
         
@@ -30,7 +30,7 @@
             %label
               価格
             .item-content__contentField
-              = f.text_field :rice, class: "input-default input-default--price"
+              = f.text_field :price, class: "input-default input-default--price"
 
         .item-content__content
           .item-content__submit

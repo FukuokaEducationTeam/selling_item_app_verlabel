@@ -18,7 +18,7 @@ $(function(){
   }
 
   function img_field(image_index_next_num) {
-    let html =`<input class="item-content__fileField" id="item-content__fileField${image_index_next_num}" data-index="${image_index_next_num}" type="file" name="item[images_attributes][${image_index_next_num}][url]">`
+    let html =`<input class="item-content__fileField" id="item-content__fileField${image_index_next_num}" data-index="${image_index_next_num}" type="file" name="item[images_attributes][${image_index_next_num}][name]">`
     return html
   }
 
