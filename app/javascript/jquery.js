@@ -1,1 +1,1 @@
-import "./image";
+　import "./image";
